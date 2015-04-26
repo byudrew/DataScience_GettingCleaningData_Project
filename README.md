@@ -15,7 +15,8 @@ To run the program, just call
 from your working directory that contains the unzipped directory ("UCI HAR Dataset").
 
 The code reads in the scattered input data files, cleans them up, combines them, then filters
-on the features and computes averages for each feature over the student and activity variables.
+on the features (accepts all that were a mean or standard deviation)
+and computes averages for each feature over the student and activity variables.
 Specifics about this process can be found in the code comments. Details about the individual
 variables can be found in CodeBook.md.
 
