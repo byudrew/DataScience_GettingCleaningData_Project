@@ -65,5 +65,8 @@ dataset <- dataset[, c(2, ncol(dataset), 3:(ncol(dataset)-1))]
 # Compute averages for each feature over each subject/activity pair
 averages <- aggregate(. ~ Subject + Activity.Name, data=dataset, mean)
 
+# Change column names to reflect that these are averages
+colnames(averages)[3:ncol(averages)] <- paste("Average", colnames(averages)[3:ncol(averages)], sep=".")
+
 # Save to "output.txt"
 write.table(averages, file="output.txt", row.names=F)
